@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" href="atualizarPessoas.html">
 </head>
 <body>
     
@@ -35,7 +35,7 @@
 <button><a href="index2.html">Cadastrar</a></button>
 
 <script>
-    var token = "0c6d8994c1694512aebe6a31bcf02282";
+    var token = "1df1b0744eaa4138b0c9f1c5d739cd38";
          // Exemplo de requisição GET para listar pessoas
         fetch("https://crudcrud.com/api/"+token+"/pessoas")
         .then(response => response.json())
@@ -72,7 +72,7 @@
         }
 
         function excluir(id) {
-            var token = "0c6d8994c1694512aebe6a31bcf02282"
+            var token = "1df1b0744eaa4138b0c9f1c5d739cd38"
             fetch("https://crudcrud.com/api/"+token+"/pessoas/" + id, {
                 method: "DELETE"
             })
@@ -84,7 +84,7 @@
         }
     
     function cadastrar() {
-        var token = "0c6d8994c1694512aebe6a31bcf02282";
+        var token = "1df1b0744eaa4138b0c9f1c5d739cd38";
           // Exemplo de requisição POST para adicionar uma nova pessoa
         fetch("https://crudcrud.com/api/"+token+"/pessoas", {
         // método de requisição (get, post, put, delete)

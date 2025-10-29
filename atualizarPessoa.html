@@ -1,17 +1,17 @@
 <link rel="stylesheet" href="styles.css">
-<button><a href="index.html">&laquo; Voltar</a></button>
+<button><a href="index2.html">&laquo; Voltar</a></button>
 <h3>Atualizar Novo Aluno</h3>
 <div>
-                    Nome: 
+                    Nome:
                     <input type="text" id="nome" name="nome" value="">
                     <br>
-                    Nascimento: 
+                    Nascimento:
                     <input type="date" id="nascimento" name="nascimento" value="">
                     <br>
-                    Telefone: 
+                    Telefone:
                     <input type="text" id="telefone" name="telefone" value="">
                     <br>
-                    Endereço: 
+                    Endereço:
                     <input type="text" id="endereco" name="endereco" value="">
                     <br>
                     <input type="hidden" name="acao" value="inserir">
@@ -26,12 +26,12 @@
     var end = parametros.get("end")
     var data = parametros.get("data")
     document.getElementById('nome').value = nome
-    document.getElementById('telefone').value = telefone
-    document.getElementById('endereco').value = endereco
-    document.getElementById('nascimento').value = nascimento
+    document.getElementById('telefone').value = tel
+    document.getElementById('endereco').value = end
+    document.getElementById('nascimento').value = data
 
-    function atualizar() {
-        var token = "0c6d8994c1694512aebe6a31bcf02282"
+    function atualizarAluno() {
+        var token = "1df1b0744eaa4138b0c9f1c5d739cd38"
         // Exemplo de requisição PUT para atualizar uma pessoa existente
         fetch("https://crudcrud.com/api/"+token+"/pessoas/"+id, {
             method: "PUT",
