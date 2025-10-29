@@ -43,7 +43,7 @@ h3 {
 }
 
 #tabelaAlunos tbody tr:hover {
-    background-color: #e0e0e0;
+    background-color: #f5f4f4;
 }
 
 hr {
@@ -78,12 +78,12 @@ button a {
 }
 
 #tabelaAlunos td button {
-    background-color: #e74c3c;
+    background-color: #500f6e;
     padding: 5px 10px;
 }
 
 #tabelaAlunos td button:hover {
-    background-color: #c0392b;
+    background-color: #d7aee9;
 }
 
 body > div {

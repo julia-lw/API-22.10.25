@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="styles.css">
+<button><a href="index.html">&laquo; Voltar</a></button>
+<h3>Atualizar Novo Aluno</h3>
+<div>
+                    Nome: 
+                    <input type="text" id="nome" name="nome" value="">
+                    <br>
+                    Nascimento: 
+                    <input type="date" id="nascimento" name="nascimento" value="">
+                    <br>
+                    Telefone: 
+                    <input type="text" id="telefone" name="telefone" value="">
+                    <br>
+                    Endereço: 
+                    <input type="text" id="endereco" name="endereco" value="">
+                    <br>
+                    <input type="hidden" name="acao" value="inserir">
+                    <button onclick="atualizarAluno()">Atualizar</button>
+</div>
+
+<script>
+    const parametros = new URLSearchParams(window.location.search);
+    var id = parametros.get("id")
+    var nome = parametros.get("nome")
+    var tel = parametros.get("tel")
+    var end = parametros.get("end")
+    var data = parametros.get("data")
+    document.getElementById('nome').value = nome
+    document.getElementById('telefone').value = telefone
+    document.getElementById('endereco').value = endereco
+    document.getElementById('nascimento').value = nascimento
+
+    function atualizar() {
+        var token = "0c6d8994c1694512aebe6a31bcf02282"
+        // Exemplo de requisição PUT para atualizar uma pessoa existente
+        fetch("https://crudcrud.com/api/"+token+"/pessoas/"+id, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: document.getElementById('nome').value,
+                nascimento: document.getElementById('nascimento').value,
+                endereco: document.getElementById('endereco').value,
+                telefone: document.getElementById('telefone').value
+            })
+            })
+            .then(() => console.log("Pessoa atualizado com sucesso"))
+            .catch(error => console.log(error))
+            .finally(() => {
+
+            setTimeout(window.location.href = "index2.html", 2000);
+            
+        });
+    }
+</script>
